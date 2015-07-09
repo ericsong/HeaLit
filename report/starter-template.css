@@ -1,7 +1,41 @@
 body {
-  padding-top: 50px;
   font-family: 'Source Sans Pro';
 }
+
+.healit-title {
+  padding-left: 20px;
+}
+
+.report-header {
+  position: relative;
+  background: #435561;
+  height: 100px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+}
+
+.report-navbar {
+  position: absolute;
+  bottom: 0px;
+  left: 42px;
+  float: left;
+}
+
+.navbar-nav li a{
+  color: white;
+}
+
+.navbar-nav > li > a:hover {
+  background-color: inherit;
+  color: inherit;
+}
+
+#nav-item-active {
+  color: #6699FF;
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
