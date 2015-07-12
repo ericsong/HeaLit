@@ -40,3 +40,80 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+      display: flex;
+        align-items: center;
+        }
+
+.concern-item {
+  height: 150px;
+  width: 100%;
+  padding-top: 10px;
+  border-bottom: 1px solid black;
+}
+
+.priority-level-indicator {
+  float: left;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.concern-item-description {
+  float: left;
+  height: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 40px;
+  padding-right: 50px;
+  font-size: 20px;
+}
+
+.parent {
+  display: flex;
+    justify-content: center;
+      align-items: center;
+      }
+
+.concern-item-actions { 
+  float: left;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#parent {
+  background-color: #eee;
+  height: 48px;
+}
+
+#colLeft {
+  background-color: #ff8b8b;
+  height: 48px;
+  float: left;
+}
+
+#colwrap{
+  overflow:hidden;
+  background-color: orange;      
+}
+
+#colCenter {
+   height: 48px;  
+}
+
+#colRight {
+   background-color: #c3d0ff;
+   height: 48px;
+   float: right;
+}
