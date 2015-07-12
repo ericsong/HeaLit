@@ -74,12 +74,6 @@ body {
   font-size: 20px;
 }
 
-.parent {
-  display: flex;
-    justify-content: center;
-      align-items: center;
-      }
-
 .concern-item-actions { 
   float: left;
   height: 100%;
@@ -92,28 +86,32 @@ html, body {
   padding: 0px;
 }
 
-#parent {
-  background-color: #eee;
-  height: 48px;
+.parent {
+  height: 150px;
+  border-bottom: 1px solid black;
 }
 
 #colLeft {
-  background-color: #ff8b8b;
-  height: 48px;
+  height: 150px;
   float: left;
+}
+
+.vertical-center {
+  position: relative;
+  min-height: 0px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #colwrap{
   overflow:hidden;
-  background-color: orange;      
 }
 
 #colCenter {
-   height: 48px;  
+   height: 150px;  
 }
 
 #colRight {
-   background-color: #c3d0ff;
-   height: 48px;
+   height: 150px;
    float: right;
 }
