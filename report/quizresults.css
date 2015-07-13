@@ -1,3 +1,7 @@
+.quizresults-container {
+  overflow-y: auto;
+}
+
 .scores-container {
   display: table;
   width: 60%;
