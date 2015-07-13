@@ -25,3 +25,15 @@
 #colwrap{
   overflow:hidden;
 }
+
+.very-high {
+  color: red
+}
+
+.high {
+  color: orange
+}
+
+.medium {
+  color: #FFCC00
+}
