@@ -40,9 +40,6 @@ html, body {
 
 .vertical-center {
   display: flex;
-}
-
-.vertical-center {
   position: relative;
   min-height: 0px;
   top: 50%;
