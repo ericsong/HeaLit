@@ -1,0 +1,27 @@
+.parent {
+  height: 150px;
+  border-bottom: 1px solid black;
+}
+
+#colLeft {
+  height: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: left;
+}
+
+#colCenter {
+   height: 150px;  
+   font-size: 20px;
+}
+
+#colRight {
+  height: 150px;
+  float: right;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#colwrap{
+  overflow:hidden;
+}
