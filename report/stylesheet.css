@@ -39,11 +39,6 @@ html, body {
   color: #6699FF;
 }
 
-.active {
-  color: #6699FF;
-}
-
-
 .vertical-center {
   position: relative;
   min-height: 0px;
