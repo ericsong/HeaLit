@@ -1,0 +1,25 @@
+.question-answer-container {
+  width: 60%;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+}
+
+.question-answer-item {
+  display: table;
+  margin: 0 auto;
+}
+
+.horizontal {
+}
+
+.horizontal .question {
+  display: table-cell;
+  vertical-align: 50%;
+  margin-top: -20px;
+  width: 60%;
+}
+
+.horizontal .answers-container {
+  display: table-cell;
+  width: 40%;
+}
