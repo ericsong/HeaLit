@@ -1,7 +1,26 @@
+.scores-container {
+  display: table;
+  width: 60%;
+  margin: 30px auto;
+}
+
+.score-total, .concerns-total {
+  display: table-cell;
+  font-size: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .question-answer-container {
   width: 60%;
   margin: 0 auto;
   border-bottom: 1px solid black;
+}
+
+.question-answer-title {
+  font-size: 26px;
+  text-align: center;
+  margin: 10px auto;
 }
 
 .question-answer-item {
@@ -14,7 +33,7 @@
 
 .horizontal .question {
   display: table-cell;
-  vertical-align: 50%;
+  vertical-align: middle;
   margin-top: -20px;
   width: 60%;
 }
