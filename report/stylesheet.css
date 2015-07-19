@@ -5,6 +5,10 @@ html, body {
   padding: 0px;
 }
 
+.hidden {
+    display: none
+}
+
 .report-header {
   position: relative;
   background: #435561;

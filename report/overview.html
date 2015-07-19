@@ -11,6 +11,7 @@
     <title>HeaLit Patient Report</title>
 
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/chartist.min.css" rel="stylesheet">
     <link href="stylesheet.css" rel="stylesheet">
     <link href="answers.css" rel="stylesheet">
     <link href="concerns.css" rel="stylesheet">
@@ -53,49 +54,56 @@
       </div>
       <div class="overview-content">
         <div class="overview-graph-container">
-          <canvas id="canvas" height="697px" width="1000px"></canvas>
+          <div class="ct-perfect-fourth"></div>
         </div>
       </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
-    <script src="Chart.js"></script>
+    <script src="dist/js/chartist.min.js"></script>
     <script>
-      var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
-      var lineChartData = {
-        labels : ["January","February","March","April","May","June","July"],
-        datasets : [
-          {
-            label: "My First dataset",
-            fillColor : "rgba(220,220,220,0.2)",
-            strokeColor : "rgba(220,220,220,1)",
-            pointColor : "rgba(220,220,220,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(220,220,220,1)",
-            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-          },
-          {
-            label: "My Second dataset",
-            fillColor : "rgba(151,187,205,0.2)",
-            strokeColor : "rgba(151,187,205,1)",
-            pointColor : "rgba(151,187,205,1)",
-            pointStrokeColor : "#fff",
-            pointHighlightFill : "#fff",
-            pointHighlightStroke : "rgba(151,187,205,1)",
-            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-          }
-        ]
+    /* Add a basic data series with six labels and values */
+    var data = {
+      labels: ['1', '2', '3', '4', '5', '6'],
+      series: [
+        {
+          data: [1, 2, 3, 5, 8, 13]
+        }
+      ]
+    };
 
+    /* Set some base options (settings will override the default settings in Chartist.js *see default settings*). We are adding a basic label interpolation function for the xAxis labels. */
+    var options = {
+      axisX: {
+        labelInterpolationFnc: function(value) {
+          return 'Calendar Week ' + value;
+        }
       }
+    };
 
-    window.onload = function(){
-      var ctx = document.getElementById("canvas").getContext("2d");
-      window.myLine = new Chart(ctx).Line(lineChartData, {
-        responsive: true
-      });
-    }
+    /* Now we can specify multiple responsive settings that will override the base settings based on order and if the media queries match. In this example we are changing the visibility of dots and lines as well as use different label interpolations for space reasons. */
+    var responsiveOptions = [
+      ['screen and (min-width: 641px) and (max-width: 1024px)', {
+        showPoint: false,
+        axisX: {
+          labelInterpolationFnc: function(value) {
+            return 'Week ' + value;
+          }
+        }
+      }],
+      ['screen and (max-width: 640px)', {
+        showLine: false,
+        axisX: {
+          labelInterpolationFnc: function(value) {
+            return 'W' + value;
+          }
+        }
+      }]
+    ];
+
+    /* Initialize the chart with the above settings */
+    new Chartist.Line('.ct-perfect-fourth', data, options, responsiveOptions);
     </script>
   </body>
 </html>
