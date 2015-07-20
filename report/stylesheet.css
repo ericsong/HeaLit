@@ -3,35 +3,40 @@ html, body {
   height: 100%;
   margin: 0px;
   padding: 0px;
+  background-color: #f7f7f7;
 }
 
 .hidden {
     display: none
 }
 
+.header-banner {
+  background-color: #1866a7
+}
+
 .report-header {
   position: relative;
-  background: #1866a7;
-  height: 95px;
   font-size: 20px;
   padding: 10px 10px 10px 10px;
   color: white
 }
 
 .healit-title {
-  padding-left: 20px;
+  padding: 0 20px 20px 20px;
+  font-size: 40px;
 }
 
 .report-navbar {
   position: absolute;
   bottom: 0px;
   left: 42px;
-  float: left;
+  display: inline-block;
+  /*float: left;*/
 }
 
 .navbar-nav li a{
   color: white;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 .navbar-nav > li > a:hover {
@@ -40,7 +45,7 @@ html, body {
 }
 
 #nav-item-active {
-  background-color: #FFF;
+  background-color: #f7f7f7;
   -webkit-border-radius: 5px 5px 0px 0px;
   -moz-border-radius: 5px 5px 0px 0px;
   border-radius: 5px 5px 0px 0px;
