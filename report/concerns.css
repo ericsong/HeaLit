@@ -1,8 +1,8 @@
 .parent {
   display: table;
-  height: 150px;
   width: 100%;
-  border-bottom: 1px solid black;
+  padding: 30px 0 30px 0;
+  border-bottom: 1px solid #0d3251;
 }
 
 .parent:first-child {
@@ -27,7 +27,7 @@
   margin: 0 auto;
   display: table-cell;
   vertical-align: middle;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #colRight {

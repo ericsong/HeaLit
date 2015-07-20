@@ -11,11 +11,11 @@ html, body {
 
 .report-header {
   position: relative;
-  background: #435561;
-  height: 100px;
+  background: #1866a7;
+  height: 95px;
   font-size: 20px;
   padding: 10px 10px 10px 10px;
-  color: white;
+  color: white
 }
 
 .healit-title {
@@ -31,15 +31,20 @@ html, body {
 
 .navbar-nav li a{
   color: white;
+  padding: 5px;
 }
 
 .navbar-nav > li > a:hover {
   background-color: inherit;
-  color: inherit;
+  color: #0d3251;
 }
 
 #nav-item-active {
-  color: #6699FF;
+  background-color: #FFF;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+  color: #0d3251;
 }
 
 .vertical-center {
