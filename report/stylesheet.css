@@ -13,9 +13,8 @@ html, body {
   position: relative;
   background: #435561;
   height: 100px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
   color: white;
 }
 

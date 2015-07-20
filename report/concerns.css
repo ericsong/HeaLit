@@ -5,6 +5,18 @@
   border-bottom: 1px solid black;
 }
 
+.parent:first-child {
+  padding: 50px 0 30px 0;
+}
+
+.parent:last-child {
+  border: none;
+}
+
+#concern-item-model {
+  width: 100%;
+}
+
 #colLeft {
   display: table-cell;
   vertical-align: middle;
@@ -12,9 +24,10 @@
 }
 
 #colCenter {
+  margin: 0 auto;
   display: table-cell;
   vertical-align: middle;
-   font-size: 20px;
+  font-size: 20px;
 }
 
 #colRight {
@@ -25,7 +38,7 @@
 }
 
 #colwrap{
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .very-high {
@@ -37,5 +50,5 @@
 }
 
 .medium {
-  color: #FFCC00
+  color: #FFD800
 }
