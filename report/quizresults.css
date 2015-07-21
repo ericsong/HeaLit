@@ -17,8 +17,11 @@
 
 .question-answer-container {
   width: 60%;
-  margin: 0 auto;
-  border-bottom: 1px solid black;
+  margin: 30px auto;
+  background-color: #fff;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .question-answer-title {
