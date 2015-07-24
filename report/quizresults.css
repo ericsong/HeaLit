@@ -16,7 +16,7 @@
 }
 
 .question-answer-container {
-  width: 60%;
+  width: 80%;
   margin: 30px auto;
   background-color: #fff;
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -34,6 +34,10 @@
   display: table;
 }
 
+.modal-question-answer-item {
+    width: 90%;
+}
+
 .horizontal {
     display: table;
     width: 100%;
@@ -44,12 +48,12 @@
   vertical-align: middle;
   text-align: center;
   margin-top: -20px;
-  width: 60%;
+  width: 50%;
 }
 
 .horizontal .answers-container {
   display: table-cell;
-  width: 40%;
+  width: 50%;
 }
 
 
