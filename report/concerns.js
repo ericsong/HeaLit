@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $('.concerns-total').text('Concerns: ' + mockSession1.concerns)
+
     mockSession1.answers.sort(function(a, b) {
         if (a.priorityLevel > b.priorityLevel) {
             return -1
