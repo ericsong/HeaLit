@@ -1,16 +1,28 @@
 $(document).ready(function() {
-    for(var i = 0; i < mockSession2.answers.length; i++) {
+    mockSession1.answers.sort(function(a, b) {
+        if (a.priorityLevel > b.priorityLevel) {
+            return -1
+        } else if (a.priorityLevel < b.priorityLevel) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+
+    console.log(mockSession1.answers)
+
+    for(var i = 0; i < mockSession1.answers.length; i++) {
         var newItem = $('#concern-item-model').clone();
         
         // Assign data
-        $(newItem).find('#colCenter').text(mockSession2.answers[i].question);
+        $(newItem).find('#colCenter').text(mockSession1.answers[i].question);
         $(newItem).find('#colLeft i').removeClass('very-high');
         
-        if (mockSession2.answers[i].priorityLevel === 3) {
+        if (mockSession1.answers[i].priorityLevel === 3) {
             $(newItem).find('#colLeft i').addClass('very-high')
-        } else if (mockSession2.answers[i].priorityLevel === 2) {
+        } else if (mockSession1.answers[i].priorityLevel === 2) {
             $(newItem).find('#colLeft i').addClass('high')
-        } else if (mockSession2.answers[i].priorityLevel === 1) {
+        } else if (mockSession1.answers[i].priorityLevel === 1) {
             $(newItem).find('#colLeft i').addClass('medium')
         }
 
