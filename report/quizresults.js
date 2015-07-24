@@ -1,5 +1,27 @@
+function arraysEqual(a, b) {
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+
+  // If you don't care about the order of the elements inside
+  // the array, you should sort both arrays here.
+
+  for (var i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+  return true;
+}
+
 $(document).ready(function() {
-    $('.concerns-total').text('Concerns : ' + mockSession1.concerns)
+    var correctCount = 0,
+        totalCount = mockSession1.answers.length;
+    for (var i = 0; i < mockSession1.answers.length; i++) {
+        if (arraysEqual(mockSession1.answers[i].userAnswerIndex, mockSession1.answers[i].correctAnswerIndex)) {
+            correctCount++;
+        }
+    }    
+
+    $('.concerns-total').text('Score : ' + correctCount + ' / ' + totalCount)
 
     mockSession1.answers.sort(function(a, b) {
         if (a.index > b.index) {
