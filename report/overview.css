@@ -3,6 +3,13 @@
   height: 100%;
 }
 
+.overview-graph-container {
+    padding: 100px 100px;
+    margin: 100px 100px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
 .overview-sidebar {
   float: left;
   width: 20%;
