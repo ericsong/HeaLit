@@ -26,6 +26,53 @@ $(document).ready(function() {
             $(newItem).find('#colLeft i').addClass('medium')
         }
 
+        // Modal modifier
+        $(newItem).find('a i').click(function() {
+            var question = $(this).parent().parent().parent().find('#colCenter').text()
+            var item
+
+            for(var i = 0; i < mockSession1.answers.length; i++) {
+                console.log(mockSession1.answers[i].question)
+                console.log(question)
+                if (mockSession1.answers[i].question === question) {
+                    item = mockSession1.answers[i];
+                    break;
+                }
+            }
+            // Assign data
+            $('.modal-body .question-answer-item .question').text(item.question);
+
+            $('.modal-body .question-answer-item .answers-container').empty()
+            for(var j = 0; j < item.choices.length; j++) {
+                var newAnswer = $('#answer-model').clone()
+                var isCorrect = false,
+                    isIncorrect = false;
+
+                if (item.userAnswerIndex.indexOf(j) !== -1) {
+                    if (item.correctAnswerIndex.indexOf(j) !== -1) {
+                        isCorrect = true
+                    } else {
+                        isIncorrect = true
+                    }
+                }
+
+                if (isCorrect) {
+                    $(newAnswer).addClass('correct')
+                    $(newAnswer).find('.answer-icon i').text('check')
+                } else if (isIncorrect) {
+                    $(newAnswer).addClass('incorrect')
+                    $(newAnswer).find('.answer-icon i').text('close')
+                }
+
+                $(newAnswer).find('.answer-text').text(mockSession1.answers[i].choices[j]);
+
+                $(newAnswer).removeAttr('id');
+                $(newAnswer).removeClass('hidden');
+                $('.modal-body .question-answer-item .answers-container').append(newAnswer)
+            }
+
+        })
+
         // Attach remove listeners
         $(newItem).find('.material-icons.correct').click(function(){
             $(this).parent().parent().fadeOut() 
