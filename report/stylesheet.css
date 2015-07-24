@@ -23,6 +23,7 @@ html, body {
 
 .healit-title {
   padding: 15px;
+  margin-bottom: 30px;
   font-size: 40px;
 }
 
@@ -45,7 +46,7 @@ html, body {
 }
 
 #nav-item-active {
-  background-color: #f7f7f7;
+  background-color: #ebebeb;
   -webkit-border-radius: 5px 5px 0px 0px;
   -moz-border-radius: 5px 5px 0px 0px;
   border-radius: 5px 5px 0px 0px;

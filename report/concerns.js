@@ -9,8 +9,6 @@ $(document).ready(function() {
         }
     })
 
-    console.log(mockSession1.answers)
-
     for(var i = 0; i < mockSession1.answers.length; i++) {
         var newItem = $('#concern-item-model').clone();
         

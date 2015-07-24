@@ -32,15 +32,17 @@
 
 .question-answer-item {
   display: table;
-  margin: 0 auto;
 }
 
 .horizontal {
+    display: table;
+    width: 100%;
 }
 
 .horizontal .question {
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
   margin-top: -20px;
   width: 60%;
 }
@@ -49,3 +51,4 @@
   display: table-cell;
   width: 40%;
 }
+
