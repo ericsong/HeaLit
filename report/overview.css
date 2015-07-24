@@ -14,8 +14,10 @@
   float: left;
   width: 20%;
   height: 100%;
+  border-right: 1px solid grey;
   padding-top: 10px;
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 .sidebar-item {

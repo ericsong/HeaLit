@@ -26,6 +26,14 @@ $(document).ready(function() {
             $(newItem).find('#colLeft i').addClass('medium')
         }
 
+        // Attach remove listeners
+        $(newItem).find('.material-icons.correct').click(function(){
+            $(this).parent().parent().fadeOut() 
+        })
+        $(newItem).find('.material-icons.incorrect').click(function(){
+            $(this).parent().parent().fadeOut() 
+        })
+
         // Make visible
         $(newItem).removeAttr('id');
         $(newItem).removeClass('hidden');
