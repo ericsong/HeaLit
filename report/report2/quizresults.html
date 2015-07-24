@@ -14,7 +14,7 @@
     <link href="stylesheet.css" rel="stylesheet">
     <link href="answers.css" rel="stylesheet">
     <link href="concerns.css" rel="stylesheet">
-    <link href="overview.css" rel="stylesheet">
+    <link href="quizresults.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,55 +27,59 @@
     <div class="header-banner">
       <header class="report-header">
         <h2 class="healit-title">HeaLit</h4>
-        <h2 class="header-date"> 6/20/2015 </h2>
+        <h2 class="header-date"> 4/12/2015 </h2>
         <div class="report-navbar">
           <ul class="nav navbar-nav">
             <li><a href="concerns.html">Concerns</a></li>
-            <li><a href="quizresults.html">Quiz Results</a></li>
-            <li><a id="nav-item-active">Overview</a></li>
+            <li><a id="nav-item-active">Quiz Results</a></li>
+            <li><a href="overview.html">Overview</a></li>
           </ul>
         </div>
       </header>
     </div>
 
-    <div class="overview-container">
-      <div class="overview-sidebar">
-        <div class="sidebar-item">
-          <div class="vertical-center">
-            <a href="overview.html">
-              Graph
-            </a>
-          </div>
-        </div>
-        <div class="sidebar-item active-sidebar-item">
-          <div class="vertical-center">
-            History
-          </div>
-        </div>
+    <div id="answer-model" class="answer hidden">
+      <div class="answer-icon">
+        <i class="material-icons"></i>
       </div>
-      <div class="overview-content">
-        <div class="parent" style="width:90%">  
-          <div id="colLeft">
-            4/12/2015
-          </div>
-
-          <div id="colCenter">
-            Score: 1/7 &nbsp;&nbsp;&nbsp;&nbsp; Concerns: 5
-          </div>
-
-          <div id="colRight">
-            <a href="report2/concerns.html" target="_blank">
-              <div class="btn">
-                View
-              </div>
-            </a>
-          </div>
-        </div>
+      <div class="answer-text">
+        excellent
       </div>
-
+      <div class="clear"></div>
     </div>
 
+    <div id="question-answer-container-model" class="question-answer-container hidden">  
+      <div class="question-answer-item horizontal">
+        <div class="question">
+            how are you feeling today?
+        </div>
+        <div class="answers-container">
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container quizresults-container">
+
+      <div class="scores-container">
+        <div class="concerns-total">
+          Concerns: 12
+        </div>
+      </div>
+
+      <div class="question-answer-container">
+        <div class="question-answer-title">
+          Patient's Answers
+        </div>
+      </div>
+
+     
+
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="MockData.js"></script>
+    <script src="quizresults.js"></script>
   </body>
 </html>

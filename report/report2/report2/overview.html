@@ -11,6 +11,7 @@
     <title>HeaLit Patient Report</title>
 
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/chartist.min.css" rel="stylesheet">
     <link href="stylesheet.css" rel="stylesheet">
     <link href="answers.css" rel="stylesheet">
     <link href="concerns.css" rel="stylesheet">
@@ -24,10 +25,10 @@
   </head>
 
   <body>
+
     <div class="header-banner">
       <header class="report-header">
-        <h2 class="healit-title">HeaLit</h4>
-        <h2 class="header-date"> 6/20/2015 </h2>
+        <h2 class="healit-title">HeaLit</h2>
         <div class="report-navbar">
           <ul class="nav navbar-nav">
             <li><a href="concerns.html">Concerns</a></li>
@@ -36,46 +37,78 @@
           </ul>
         </div>
       </header>
-    </div>
+  </div>
 
     <div class="overview-container">
       <div class="overview-sidebar">
-        <div class="sidebar-item">
-          <div class="vertical-center">
-            <a href="overview.html">
-              Graph
-            </a>
-          </div>
-        </div>
         <div class="sidebar-item active-sidebar-item">
           <div class="vertical-center">
-            History
+            Graph
+          </div>
+        </div>
+        <div class="sidebar-item">
+          <div class="vertical-center">
+            <a href="overview_history.html">
+              History
+            </a>
           </div>
         </div>
       </div>
       <div class="overview-content">
-        <div class="parent" style="width:90%">  
-          <div id="colLeft">
-            4/12/2015
-          </div>
-
-          <div id="colCenter">
-            Score: 1/7 &nbsp;&nbsp;&nbsp;&nbsp; Concerns: 5
-          </div>
-
-          <div id="colRight">
-            <a href="report2/concerns.html" target="_blank">
-              <div class="btn">
-                View
-              </div>
-            </a>
-          </div>
+        <div class="overview-graph-container">
+          <div class="ct-perfect-fourth"></div>
         </div>
       </div>
-
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/chartist.min.js"></script>
+    <script>
+    /* Add a basic data series with six labels and values */
+    var data = {
+      labels: ['1', '2', '3', '4', '5', '6'],
+      series: [
+        {
+          data: [13, 8, 5, 3, 2, 1]
+        }
+      ]
+    };
+
+    /* Set some base options (settings will override the default settings in Chartist.js *see default settings*). We are adding a basic label interpolation function for the xAxis labels. */
+    var options = {
+      axisX: {
+        labelInterpolationFnc: function(value) {
+          return 'Calendar Week ' + value;
+        }
+      }
+    };
+
+    /* Now we can specify multiple responsive settings that will override the base settings based on order and if the media queries match. In this example we are changing the visibility of dots and lines as well as use different label interpolations for space reasons. */
+    var responsiveOptions = [
+      ['screen and (min-width: 641px) and (max-width: 1024px)', {
+        showPoint: false,
+        axisX: {
+          labelInterpolationFnc: function(value) {
+            return 'Week ' + value;
+          }
+        }
+      }],
+      ['screen and (max-width: 640px)', {
+        showLine: false,
+        axisX: {
+          labelInterpolationFnc: function(value) {
+            return 'W' + value;
+          }
+        }
+      }]
+    ];
+
+    /* Initialize the chart with the above settings */
+    new Chartist.Line('.ct-perfect-fourth', data, options, responsiveOptions);
+    </script>
   </body>
 </html>
+
+
+

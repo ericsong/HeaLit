@@ -1,0 +1,40 @@
+.question {
+  font-size: 20px;
+  padding: 20px 20px;
+}
+
+.answers-container {
+  padding: 20px 20px;
+}
+
+.answer {
+  display: table;
+  width: 100%;
+  font-size: 16px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 3px 3px;
+  clear: both;
+}
+
+.incorrect {
+  color: red;
+}
+
+.correct {
+  color: green;
+}
+
+.answer-icon {
+  float: left;
+  width: 25px;
+  height: 100%;
+  float: left;
+}
+
+.answer-text {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}

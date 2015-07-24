@@ -1,4 +1,4 @@
-var mockSession = mockSession2;
+var mockSession = mockSession1;
 
 function arraysEqual(a, b) {
   if (a === b) return true;

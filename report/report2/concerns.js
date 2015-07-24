@@ -1,4 +1,4 @@
-var mockSession = mockSession2;
+var mockSession = mockSession1;
 
 $(document).ready(function() {
     $('.concerns-total').text('Concerns: ' + mockSession.concerns)
