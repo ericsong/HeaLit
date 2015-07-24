@@ -4,6 +4,7 @@ var mockSessionBase = {
     answers: [
       {
           index: 1,
+          priorityLevel: 3,
           question: 'Do you have diabetes?',
           choices: [
               'No',
@@ -15,6 +16,7 @@ var mockSessionBase = {
       },
       {
           index: 2,
+          priorityLevel: 1,
           question: 'What does it mean to have diabetes?',
           choices: [
               "I can't digest sugar",
@@ -26,6 +28,7 @@ var mockSessionBase = {
       },
       {
           index: 3,
+          priorityLevel: 3,
           question: 'How can you treat diabetes?',
           choices: [
               'Diet',
@@ -39,6 +42,7 @@ var mockSessionBase = {
       },
       {
           index: 4,
+          priorityLevel: 2,
           question: 'Can you drink beer?',
           choices: [
               'Yes',
@@ -50,6 +54,7 @@ var mockSessionBase = {
       },
       {
           index: 5,
+          priorityLevel: 3,
           question: 'Can you drink energy drinks? (ex. Red Bull, Monster)',
           choices: [
               'Yes',
@@ -61,6 +66,7 @@ var mockSessionBase = {
       },
       {
           index: 6,
+          priorityLevel: 1,
           question: 'Can you eat air popped popcorn?',
           choices: [
               'Yes',
@@ -72,6 +78,7 @@ var mockSessionBase = {
       },
       {
           index: 7,
+          priorityLevel: 2,
           question: 'Which of these foods are good to eat?',
           choices: [
               'Turkey Bacon',
