@@ -25,9 +25,9 @@
 }
 
 .question-answer-title {
+  width: 100%;
   font-size: 26px;
   text-align: center;
-  margin: 10px auto;
 }
 
 .question-answer-item {
@@ -51,4 +51,5 @@
   display: table-cell;
   width: 40%;
 }
+
 
